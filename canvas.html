@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <title>Canvas Example</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas Example</h1>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(50, 50, 150, 100);
+        ctx.beginPath();
+        ctx.arc(250, 200, 50, 0, Math.PI * 2, false);
+        ctx.fillStyle = 'red';
+        ctx.fill();
+        ctx.stroke();
+    </script>
+</body>
+</html>
